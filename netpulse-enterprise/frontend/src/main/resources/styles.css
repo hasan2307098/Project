@@ -1,0 +1,92 @@
+/* NetPulse Enterprise - dashboard theme */
+
+.root {
+    -fx-background-color: #10151f;
+    -fx-font-family: "Segoe UI", "Inter", "Helvetica Neue", sans-serif;
+    -fx-font-size: 13px;
+}
+
+.header-bar {
+    -fx-background-color: #161d2b;
+    -fx-border-color: transparent transparent #253046 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.app-title {
+    -fx-text-fill: #f2f5fa;
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+}
+
+.subtle {
+    -fx-text-fill: #8d9bb5;
+}
+
+.section-label {
+    -fx-text-fill: #b9c6dd;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: #1d2637;
+    -fx-text-fill: #eef2f8;
+    -fx-prompt-text-fill: #6c7a94;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #2c3850;
+}
+
+.button {
+    -fx-background-color: #24405f;
+    -fx-text-fill: #e8eef8;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-padding: 6 14 6 14;
+}
+
+.button:hover { -fx-background-color: #2f5480; }
+.button:disabled { -fx-opacity: 0.45; }
+
+.button-primary { -fx-background-color: #1f9d63; }
+.button-primary:hover { -fx-background-color: #24b975; }
+
+.button-danger { -fx-background-color: #9d3245; }
+.button-danger:hover { -fx-background-color: #bc3c53; }
+
+.table-view {
+    -fx-background-color: #131a27;
+    -fx-border-color: #253046;
+    -fx-table-cell-border-color: #1e2839;
+}
+
+.table-view .column-header-background { -fx-background-color: #1a2333; }
+.table-view .column-header .label {
+    -fx-text-fill: #9db0cc;
+    -fx-font-weight: bold;
+    -fx-alignment: center-left;
+}
+.table-view .table-row-cell { -fx-background-color: #131a27; -fx-border-color: transparent; }
+.table-view .table-row-cell:odd { -fx-background-color: #161e2d; }
+.table-view .table-row-cell:selected { -fx-background-color: #24405f; }
+.table-view .table-cell { -fx-text-fill: #dbe4f2; }
+
+.status-online   { -fx-text-fill: #46d08a; -fx-font-weight: bold; }
+.status-slow     { -fx-text-fill: #e8b341; -fx-font-weight: bold; }
+.status-offline  { -fx-text-fill: #f0616f; -fx-font-weight: bold; }
+.status-pending  { -fx-text-fill: #7d8aa3; }
+
+.chart { -fx-background-color: #131a27; -fx-padding: 6; }
+.chart-plot-background { -fx-background-color: #101724; }
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines { -fx-stroke: #222e42; }
+.axis { -fx-tick-label-fill: #8d9bb5; }
+.axis-label { -fx-text-fill: #9db0cc; }
+.chart-title { -fx-text-fill: #d7e0ee; -fx-font-size: 13px; }
+.chart-legend { -fx-background-color: transparent; -fx-text-fill: #b9c6dd; }
+.chart-legend-item { -fx-text-fill: #b9c6dd; }
+
+.status-bar {
+    -fx-background-color: #161d2b;
+    -fx-border-color: #253046 transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+.status-bar .label { -fx-text-fill: #8d9bb5; }
