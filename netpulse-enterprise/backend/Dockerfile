@@ -9,4 +9,6 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+
+# Execute with explicit classpath and main class entry point
+CMD ["java", "-cp", "app.jar", "com.netpulse.backend.BackendApplication"]
