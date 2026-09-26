@@ -1,7 +1,7 @@
 # Step 1: Build Java application using Maven
 FROM maven:3.9-eclipse-temurin-17 AS builder
 WORKDIR /app
-COPY netpulse-enterprise/backend /app
+COPY . .
 RUN mvn clean package -DskipTests
 
 # Step 2: Run application with lightweight JRE
