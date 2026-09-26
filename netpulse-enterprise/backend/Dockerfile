@@ -7,8 +7,14 @@ RUN mvn clean package -DskipTests
 # Step 2: Run application with lightweight JRE
 FROM eclipse-temurin:17-jre
 WORKDIR /app
-COPY --from=builder /app/target/*.jar app.jar
+
+# Exclude original-*.jar and copy the shaded executable jar
+COPY --from=builder /app/target/!(*original*).jar app.jar 2>/dev/null || true
+
+# If the shell glob didn't match, copy target jars safely
+COPY --from=builder /app/target /app/target
+
 EXPOSE 8080
 
-# Execute with explicit classpath and main class entry point
-CMD ["java", "-cp", "app.jar", "com.netpulse.backend.BackendApplication"]
+# Find the fat jar (excluding original) and execute it directly
+CMD ["sh", "-c", "JAR_FILE=$(ls target/*.jar | grep -v 'original' | head -n 1) && java -jar $JAR_FILE"]
